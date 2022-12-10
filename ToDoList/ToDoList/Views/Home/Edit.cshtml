@@ -1,0 +1,30 @@
+﻿@model ToDoList.Models.ToDo
+
+<h2>Edit</h2>
+@using (Html.BeginForm("EditToDo", "Home", FormMethod.Post))
+{
+<form class="form-group" method="post">
+    <button class="btn btn-success">Edit</button>
+    <br />
+    @Html.LabelFor(x => x.check)
+    @Html.CheckBoxFor(x => x.check, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = ("readonly") })
+    <br />
+    @Html.LabelFor(x => x.title)
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.time)
+    @Html.TextBoxFor(x => x.time, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.todo)
+    @Html.TextAreaFor(x => x.todo, 15, 1, new { @class = "form-control" })
+
+
+
+
+
+
+</form>
+}

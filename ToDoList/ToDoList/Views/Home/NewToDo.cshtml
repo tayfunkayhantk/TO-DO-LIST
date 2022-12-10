@@ -1,0 +1,17 @@
+﻿@model ToDoList.Models.ToDo
+
+    <h2>New To Do</h2>
+
+        <form class="form-group" method="post">
+            @Html.LabelFor(x => x.title)
+            @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+            <br />
+            @Html.LabelFor(x => x.time)
+            @Html.TextBoxFor(x => x.time, new { @class = "form-control" })
+            <br />
+            @Html.LabelFor(x => x.todo)
+            @Html.TextAreaFor(x => x.todo, 15, 1, new { @class = "form-control" })
+            <br />
+            <button class="btn btn-primary">Submit</button>
+
+        </form>
